@@ -7,7 +7,7 @@ import { GitHubIcon } from "@/components/ui/GitHubIcon";
 import { TutorialBanner } from "@/components/screens/TutorialBanner";
 import { ScenarioCard } from "@/components/screens/ScenarioCard";
 
-const GITHUB_URL = "https://github.com/your-username/nightcity-tracer";
+const GITHUB_URL = "https://github.com/thomassimmer/nightcity-tracer";
 
 interface Props {
   scenarios: Scenario[];
