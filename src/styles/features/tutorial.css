@@ -1,0 +1,93 @@
+.tutorial-banner {
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tutorial-banner:hover {
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 15px rgba(0, 0, 0, 0.5),
+        0 0 12px rgba(245, 158, 11, 0.5);
+    border-color: rgba(245, 158, 11, 0.65) !important;
+}
+
+.resume-banner {
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.resume-banner:hover {
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 15px rgba(0, 0, 0, 0.5),
+        0 0 12px rgba(34, 197, 94, 0.5);
+    border-color: rgba(34, 197, 94, 0.65) !important;
+}
+
+.tutorial-btn {
+    position: relative;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - 8px),
+        calc(100% - 8px) 100%,
+        0 100%
+    );
+}
+
+.tutorial-btn::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    border-bottom: 8px solid rgba(245, 158, 11, 0.4);
+    border-left: 8px solid transparent;
+}
+
+.tutorial-btn--left {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    color: #f59e0b;
+    background: transparent;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.tutorial-btn--left:not(:disabled):hover {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.7);
+}
+
+.tutorial-btn--left::after {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 8px solid transparent;
+}
+
+.tutorial-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.tutorial-highlight {
+    outline: 2px solid #f59e0b !important;
+    outline-offset: 3px;
+    animation: tutorial-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes tutorial-pulse {
+    0%,
+    100% {
+        outline-color: #f59e0b;
+        box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.15);
+    }
+    50% {
+        outline-color: #fcd34d;
+        box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.35);
+    }
+}

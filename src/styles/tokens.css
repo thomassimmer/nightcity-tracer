@@ -1,0 +1,75 @@
+:root {
+    --font-display: "Outfit", sans-serif;
+    --font-header: "Orbitron", sans-serif;
+    --font-mono: "Roboto Mono", monospace;
+
+    --arasaka-primary: #ff0055;
+    --arasaka-primary-glow: rgba(255, 0, 85, 0.35);
+    --arasaka-bg: rgba(18, 2, 6, 0.9);
+    --arasaka-border: rgba(255, 0, 85, 0.2);
+
+    --militech-primary: #0088ff;
+    --militech-primary-glow: rgba(0, 136, 255, 0.35);
+    --militech-bg: rgba(2, 8, 22, 0.9);
+    --militech-border: rgba(0, 136, 255, 0.2);
+
+    --netwatch-primary: #00f0ff;
+    --netwatch-primary-glow: rgba(0, 240, 255, 0.35);
+    --netwatch-bg: rgba(1, 15, 20, 0.9);
+    --netwatch-border: rgba(0, 240, 255, 0.2);
+
+    --biotechnica-primary: #fcee0a;
+    --biotechnica-primary-glow: rgba(252, 238, 10, 0.35);
+    --biotechnica-bg: rgba(15, 15, 2, 0.9);
+    --biotechnica-border: rgba(252, 238, 10, 0.2);
+
+    --trauma-primary: #3ab5cc;
+    --trauma-primary-glow: rgba(58, 181, 204, 0.35);
+    --trauma-bg: rgba(8, 26, 32, 0.9);
+    --trauma-border: rgba(192, 45, 20, 0.3);
+
+    --fixer-primary: #b8f020;
+    --fixer-primary-glow: rgba(184, 240, 32, 0.35);
+    --fixer-bg: rgba(4, 10, 4, 0.9);
+    --fixer-border: rgba(184, 240, 32, 0.2);
+
+    --theme-primary: var(--netwatch-primary);
+    --theme-glow: var(--netwatch-primary-glow);
+    --theme-bg: var(--netwatch-bg);
+    --theme-border: var(--netwatch-border);
+
+    --dark-main: #06060c;
+    --panel-backdrop: rgba(10, 10, 18, 0.7);
+    --glow-size: 0 0 10px var(--theme-primary), 0 0 2px var(--theme-primary);
+}
+
+.theme-arasaka {
+    --theme-primary: var(--arasaka-primary);
+    --theme-glow: var(--arasaka-primary-glow);
+    --theme-bg: var(--arasaka-bg);
+    --theme-border: var(--arasaka-border);
+}
+.theme-militech {
+    --theme-primary: var(--militech-primary);
+    --theme-glow: var(--militech-primary-glow);
+    --theme-bg: var(--militech-bg);
+    --theme-border: var(--militech-border);
+}
+.theme-biotechnica {
+    --theme-primary: var(--biotechnica-primary);
+    --theme-glow: var(--biotechnica-primary-glow);
+    --theme-bg: var(--biotechnica-bg);
+    --theme-border: var(--biotechnica-border);
+}
+.theme-trauma_team {
+    --theme-primary: var(--trauma-primary);
+    --theme-glow: var(--trauma-primary-glow);
+    --theme-bg: var(--trauma-bg);
+    --theme-border: var(--trauma-border);
+}
+.theme-fixer {
+    --theme-primary: var(--fixer-primary);
+    --theme-glow: var(--fixer-primary-glow);
+    --theme-bg: var(--fixer-bg);
+    --theme-border: var(--fixer-border);
+}

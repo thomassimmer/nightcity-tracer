@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NightOps :: Operator Terminal</title>
+  <link rel="stylesheet" href="/static/ops/terminal.css">
+</head>
+<body class="ops-terminal">
+
+<header class="topbar">
+  <span class="logo">// NIGHTOPS //</span>
+  <span class="user">{{ request.user.username }}</span>
+  <span class="district">Kabuki / Watson</span>
+</header>
+
+<main>
+  <section id="brief-queue">
+    <h2>INCOMING MISSION BRIEFS</h2>
+
+    {% for brief in briefs %}
+    <article class="brief-card" data-id="{{ brief.id }}">
+      <div class="brief-meta">
+        <span class="handle">{{ brief.client_handle }}</span>
+        <span class="location">{{ brief.location }}</span>
+        <span class="payout">{{ brief.payout }} ed</span>
+      </div>
+      <h3>{{ brief.title }}</h3>
+      {# description stores sanitized rich text from the client WYSIWYG editor #}
+      <div class="brief-body">{{ brief.description|safe }}</div>
+      <button class="contract-btn" data-brief="{{ brief.id }}">Generate contract</button>
+    </article>
+    {% empty %}
+    <p class="empty-queue">No pending briefs.</p>
+    {% endfor %}
+
+  </section>
+</main>
+
+<script>
+  const OPS_TOKEN = localStorage.getItem('nightops_token');
+
+  document.querySelectorAll('.contract-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const briefId = btn.dataset.brief;
+      await fetch('/ops/api/contracts/preview/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + OPS_TOKEN,
+        },
+        body: JSON.stringify({
+          template: 'standard_op',
+          context: { op_name: briefId },
+          addendum: '',
+        }),
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

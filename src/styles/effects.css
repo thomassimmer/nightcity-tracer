@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-main);
+    color: #c4c9e2;
+    font-family: var(--font-display);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    z-index: 9998;
+    pointer-events: none;
+    animation: crt-pulse 6s infinite;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--theme-border);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-primary);
+}
+
+.alarm-active {
+    animation: alarm-pulse 1.5s infinite;
+    border-width: 2px !important;
+}
