@@ -14,9 +14,7 @@ No flags to capture. No shell to pop. Just evidence and judgment.
 
 ## Why this exists
 
-Most cybersecurity tools focus on the offensive side: find the vulnerability, exploit it. NightCity Tracer flips the perspective. You're the blue team analyst piecing together what happened, or stopping what's happening right now. This is closer to what most security engineers actually do day to day.
-
-And it looks nothing like a boring training platform.
+Most cybersecurity tools focus on the offensive side: find the vulnerability, exploit it. NightCity Tracer flips the perspective. You're the blue team analyst piecing together what happened, or stopping what's happening right now.
 
 ---
 
