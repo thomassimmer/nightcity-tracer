@@ -6,6 +6,8 @@ You are a SOC analyst in Night City. A breach just happened, or is happening rig
 
 No flags to capture. No shell to pop. Just evidence and judgment.
 
+Available at : [thomassimmer.github.io/nightcity-tracer/](https://thomassimmer.github.io/nightcity-tracer/)
+
 ![NightCity Tracer scenario menu](docs/img/screenshot-menu.png)
 
 ![NightCity Tracer investigation HUD](docs/img/screenshot-hud.png)
